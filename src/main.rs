@@ -5,6 +5,16 @@ fn main() {
 
     println!("s was '{}', and without vowels is '{}'.", s, s_disemvowel);
 }
+fn disemvowel(word: &str) -> String {
+    let mut newWord = String::from("");
+    let vowels = vec!['a','e','i','o','u', 'A','E','I','O','U'];
+
+    for letter in word.chars(){   
+        if !vowels.contains(&letter) { newWord.push(letter);} 
+    }
+    
+    newWord
+}
 
 // Everything from here down is Rust test code. You shouldn't need to 
 // change any of this. 
